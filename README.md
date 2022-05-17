@@ -59,6 +59,7 @@ presented in the paper using the data provided. To reproduce, please follow the 
 
    - Go to model's path `cd ./COVID19_prediction/COVID_model`
       - Train the model `sh run_train.sh`
+         -  After training, models will be stored in path `./COVID19_prediction/data/train/` 
       - Test the model `sh run_test.sh`
 
 1. Baselined on model output, we also provide the codes to generate table and figure in our paper in `covid19-sounds-npjDM/results`:
