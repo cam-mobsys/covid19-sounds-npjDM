@@ -120,9 +120,9 @@ def get_android(uid, COVID):
         covid, sym = get_covid(temp)
 
         if TASK == 1:
-            ccc = "covid" in covid if COVID == "pos" else covid == "healthnosym"
+            ccc = "covid" in covid if COVID == 1 else covid == "healthnosym"
         if TASK == 2:
-            ccc = "covid" in covid if COVID == "pos" else "health" in covid
+            ccc = "covid" in covid if COVID == 1 else "health" in covid
 
         if ccc:
             samples = os.listdir(os.path.join(path, folds, files))
@@ -152,9 +152,9 @@ def get_web(uid, COVID):  # date
     # print(get_covid(temp))
     covid, sym = get_covid(temp)
     if TASK == 1:
-        ccc = "covid" in covid if COVID == "pos" else covid == "healthnosym"
+        ccc = "covid" in covid if COVID == 1 else covid == "healthnosym"
     if TASK == 2:
-        ccc = "covid" in covid if COVID == "pos" else "health" in covid
+        ccc = "covid" in covid if COVID == 1 else "health" in covid
     if ccc:
         samples = os.listdir(os.path.join(path, folds, uid))
         for sample in samples:
